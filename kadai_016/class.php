@@ -15,11 +15,6 @@
             private $name;
             private $price;
 
-            // メソッドを定義する
-            public function show_price(int $price) {
-              $this->price = $price;
-            }
-          
             // コンストラクタを定義する
             public function __construct(string $name, int $price) {
                 $this->name = $name;
@@ -27,14 +22,14 @@
 
             }
               // プロパティを取得するためのゲッターメソッド
-              public function getPrice(): int {
+              public function show_price(): int {
                 return $this->price;
             }
           }
           // インスタンス化する
           $food = new Food('potato', 250);
 
-          // インスタンス$userの各プロパティの値を出力する
+          // インスタンス$foodの各プロパティの値を出力する
           print_r($food);
 
           echo '<br>';
@@ -46,10 +41,6 @@
             private $height;
             private $weight;
 
-            // メソッドを定義
-            public function show_weight(int $weight) {
-              $this->weight =$weight;
-            }
              // コンストラクタを定義する
             public function __construct(string $name, int $height, int $weight) {
               $this->name = $name;
@@ -57,21 +48,21 @@
               $this->weight = $weight;
             }
 
-            // プロパティを取得するためのゲッターメソッド
-            public function getHeight(): int {
+            // プロパティを取得するためのメソッド
+            public function show_height(): int {
               return $this->height;
           }
           }
           // インスタンス化
           $animal = new Animal('dog', 60, 5000);
 
-           // インスタンス$userの各プロパティの値を出力する
+           // インスタンス$animalの各プロパティの値を出力する
           print_r($animal);
 
           echo '<br>';
-          echo $food->getPrice();
+          echo $food->show_price();
           echo '<br>';
-          echo $animal->getHeight();
+          echo $animal->show_height();
           
 
           
