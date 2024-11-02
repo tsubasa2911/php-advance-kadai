@@ -17,14 +17,14 @@
 
             // コンストラクタを定義する
             public function __construct(string $name, int $price) {
-                $this->name = $name;
-                $this->price = $price;
+              $this->name = $name;
+              $this->price = $price;
 
             }
               // プロパティを取得するためのゲッターメソッド
-              public function show_price(): int {
-                return $this->price;
-            }
+              public function show_price() {
+                echo $this->price;
+              }
           }
           // インスタンス化する
           $food = new Food('potato', 250);
@@ -49,9 +49,9 @@
             }
 
             // プロパティを取得するためのメソッド
-            public function show_height(): int {
-              return $this->height;
-          }
+            public function show_height(){
+              echo $this->height;
+            }
           }
           // インスタンス化
           $animal = new Animal('dog', 60, 5000);
@@ -60,9 +60,9 @@
           print_r($animal);
 
           echo '<br>';
-          echo $food->show_price();
+          $food->show_price();
           echo '<br>';
-          echo $animal->show_height();
+          $animal->show_height();
           
 
           
